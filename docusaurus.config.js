@@ -9,7 +9,7 @@ const config = {
   title: 'Developer Wiki',
   tagline: 'Enchird Developer Documentation',
   url: 'https://dev.enchird.com',
-  baseUrl: '/',
+  baseUrl: '/enchird-wiki/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

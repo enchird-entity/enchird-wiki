@@ -14,6 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'enchird-entity', // Usually your GitHub org/user name.
+  trailingSlash: true,
   projectName: 'Developer Wiki', // Usually your repo name.
 
   presets: [

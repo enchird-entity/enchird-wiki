@@ -47,6 +47,6 @@ keep a consistent workflow, as a result, there a few rules to to consider:
 
 ## Processes
 
-The primary two process of the app the [main process](/processes?id=the-main-process) which can be considered the backbone of the application and the [Render process](/processes?id=the-render-process) which is much of the user interface or vue application. The main process code resides in `src/main` and the render process `src/renderer`
+The primary two process of the app the [main process](/docs/nudle/processes?#the-main-process) which can be considered the backbone of the application and the [Render process](/docs/nudle/processes?#the-render-process) which is much of the user interface or vue application. The main process code resides in `src/main` and the render process `src/renderer`
 
 When the app is launched, the main process is triggered and it runs the `createWindow()` function to create a window and load the render process file (which is `https://localhost:3000` in development and `dist/electron/index.html` in production).

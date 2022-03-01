@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkenchird_wiki=self.webpackChunkenchird_wiki||[]).push([[346],{1816:function(i){i.exports=JSON.parse('{"allTagsPath":"/enchird-wiki/blog/tags","slug":"/enchird-wiki/blog/tags/docusaurus","name":"docusaurus","count":4,"permalink":"/enchird-wiki/blog/tags/docusaurus"}')}}]);

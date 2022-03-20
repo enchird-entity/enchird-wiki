@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkenchird_wiki=self.webpackChunkenchird_wiki||[]).push([[4233],{3348:function(i){i.exports=JSON.parse('{"allTagsPath":"/enchird-wiki/blog/tags","slug":"/enchird-wiki/blog/tags/facebook","name":"facebook","count":1,"permalink":"/enchird-wiki/blog/tags/facebook"}')}}]);

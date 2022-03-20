@@ -10,6 +10,7 @@ const config = {
   tagline: 'Enchird Developer Documentation',
   url: 'https://dev.enchird.com',
   baseUrl: '/enchird-wiki/',
+  // baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -25,13 +26,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/enchird-entity/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/enchird-entity/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -61,7 +61,7 @@ const config = {
         },
       },
       navbar: {
-        title: 'Enchird Dev',
+        title: 'Enchird Developer',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
@@ -73,6 +73,7 @@ const config = {
             position: 'left',
             label: 'Documentaion',
           },
+          {to: '/code-of-conduct', label: 'Code of conduct', position: 'left'},
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/enchird-entity',
@@ -124,7 +125,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Enchird Technologies Co Ltd`,
       },
       prism: {
         theme: lightCodeTheme,

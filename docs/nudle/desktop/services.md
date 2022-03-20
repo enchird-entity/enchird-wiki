@@ -23,17 +23,18 @@ main
 Ipc (Inter process communication) is a protocol used by electron to communicate between the main process and render process. [See Electron Ipc](https://www.electronjs.org/docs/latest/tutorial/ipc). Usually what happens is you will create a listener function in the main process then invoke it by sending a message form the renderer process and when the process is done, it returns a value or not. For homogeneity, it is recommended to put all Ipc listeners in the file  `src/main/services/listener.services.ts`, so it is easily identifiable and easy to debug. All listeners should be added in the `registerMainProcessListeners` function. See the example below;
 #### Example
 ```typescript
-...
-export function registerMainProcessListeners({ ipc, dialog, configPath, window, settings }) {
+import { NudleServiceContextWindow } from "../modules/service.module";
+
+export default function registerMainProcessListeners(context: NudleServiceContextWindow) {
  /**
   * This service listens to the 'APP::BACKUP_REQUEST_REPLY' event from the render process
   *  and writes the backup data to a file.
   * ipc is the same as ipcMain exported from electron, 
-  * NudleService factory will pass iPcMain as ipc in the parameters.
+  * NudleService factory will provide iPcMain as ipc in the context.
  */
-  ipc.on("APP::BACKUP_REQUEST_REPLY", (event, arg) => {
+  context.ipc.on("APP::BACKUP_REQUEST_REPLY", (event, arg) => {
     // write backup to file
-    outputFile(join(configPath, "_nudle-db.bck"), arg, (err) => {
+    outputFile(join(context.configPath, "_nudle-db.bck"), arg, (err) => {
       console.log(err);
     });
   });

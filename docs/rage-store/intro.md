@@ -7,7 +7,7 @@ RageDB is Enchird's live synchronised NoSQL database javascript module built on 
 
 We will be using [Couchbase][couchbase] as the backend for the PouchDB client.
 
-## PouchDBn
+## PouchDB
 PouchDB is a JavaScript implementation of [CouchDB][couchdb]. Its goal is to emulate the CouchDB API with near-perfect fidelity, while running in the browser or in Node.js.
 
 CouchDB is a NoSQL database created in 2005 by Damien Katz, and now maintained by the Apache Software Foundation. If you are a JavaScript developer, you probably use CouchDB every day, because it's the core technology that powers npm.

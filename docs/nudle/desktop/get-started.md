@@ -26,12 +26,12 @@ npm test
 
 ### Using version control
 
-There are two main branches; `master` and `develop`. You will most probably be working with other developers, it is very important to 
+There are two main branches: `master` and `develop`. You will most probably be working with other developers, it is very important to 
 keep a consistent workflow, as a result, there a few rules to to consider:
 
 1. **NEVER** push your code directly to the master branch. pushing to master branch is **ONLY** done by the team & project leads
 2. **ALWAYS** create a new branch and name it according to the feature you are working on or your name, so it makes it easier to an assigned personnel verify and approve your code.
-3. Once you are ready to submit your code, create a **pull request** to the **develop** branch. The team leads will verify and approve the merge. Incase nobody is available to verify, you can merge it directly to the develop branch.
+3. Once you are ready to submit your code, create a **pull request** to the **develop** branch. The team leads will verify and approve and merge. Incase nobody is available to verify, you can merge it directly to the develop branch.
 
 ### Adding dependencies
 This project uses many packages like [moment](https://momentjs.com), [lodash](https://lodash.com). You can install other dependencies you see fit, make sure you follow our [guide for using packages](/docs/guide-to-using-packages/).
@@ -71,7 +71,7 @@ Usage in your vue file
 Learn more about how to use Oh Icons [here.](https://oh-vue-icons.js.org/docs/)
 
 
-### Internalization
+### Internationalization (i18n)
 As of now Nudle is multi-lingual, supporting three langues; English, French and Spanish. The language files are located in `src/renderer/locales/`  Nudle uses a third party vue library [Vue-i18n](https://kazupon.github.io/vue-i18n/guide/formatting.html#named-formatting) to format language strings.
 #### Example usage
 ```json

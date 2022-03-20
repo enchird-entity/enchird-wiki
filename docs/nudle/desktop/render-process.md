@@ -91,7 +91,7 @@ export default function registerModules(App: App) {
 
 ```
 
-## Internalization
+## Internationalization (i18n)
 As of now Nudle is multi-lingual, supporting three langues; English, French and Spanish. The language files are located in `src/renderer/locales/`  Nudle uses a third party vue library [Vue-i18n](https://kazupon.github.io/vue-i18n/guide/formatting.html#named-formatting) to format language strings.
 #### Example usage
 ```json

@@ -22,7 +22,7 @@ main
 ## Listeners
 Ipc (Inter process communication) is a protocol used by electron to communicate between the main process and render process. [See Electron Ipc](https://www.electronjs.org/docs/latest/tutorial/ipc). Usually what happens is you will create a listener function in the main process then invoke it by sending a message form the renderer process and when the process is done, it returns a value or not. For homogeneity, it is recommended to put all Ipc listeners in the file  `src/main/services/listener.services.ts`, so it is easily identifiable and easy to debug. All listeners should be added in the `registerMainProcessListeners` function. See the example below;
 #### Example
-```typescript
+```javascript
 import { NudleServiceContextWindow } from "../modules/service.module";
 
 export default function registerMainProcessListeners(context: NudleServiceContextWindow) {
@@ -99,3 +99,16 @@ const hourlyScheduler = createSchedulerService("30 */1 * * *", (context) => {
 export { hourlyScheduler }
 ```
 If you want to create a scheduler function, you should write it in the `src/main/services/scheduler.services.ts`. **Note** All functions you write here must be exported, else they would not be called.
+
+
+## Context
+Every service is provided with a context object as parameter which can be of type `NudleServiceContextWindow` or `NudleServiceContext`. Context provides services with Nudle APIs.
+#### Context Interface
+* **settings**: `SettingsModule` Settings object.
+* **userDataPath**: `string` Path to User data part on the user's system ($USER_DATA on windows and $APP_DATA on MacOs)
+* **configPath**: `string` Path to Nudle config folder.
+* **ipc**: `IpcMain` ipcMain object
+* **dialog**: `Dialog` dialog object, to create alert box, show open file dialog and save file dialogs.
+* **systemInformation**:
+  * **platform**: returns the operating system platform
+  * **version**: The version of the loaded application

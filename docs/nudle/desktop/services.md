@@ -22,7 +22,7 @@ main
 ## Listeners
 Ipc (Inter process communication) is a protocol used by electron to communicate between the main process and render process. [See Electron Ipc](https://www.electronjs.org/docs/latest/tutorial/ipc). Usually what happens is you will create a listener function in the main process then invoke it by sending a message form the renderer process and when the process is done, it returns a value or not. For homogeneity, it is recommended to put all Ipc listeners in the file  `src/main/services/listener.services.ts`, so it is easily identifiable and easy to debug. All listeners should be added in the `registerMainProcessListeners` function. See the example below;
 #### Example
-```javascript
+```javascript title=src/main/services/listeners.services.ts
 import { NudleServiceContextWindow } from "../modules/service.module";
 
 export default function registerMainProcessListeners(context: NudleServiceContextWindow) {
@@ -51,7 +51,7 @@ Hooks are functions that are called at specific points during the application's 
 
 **NOTE:** All hooks must return a **Boolean** and should be exported else they will not be called by Nudle.
 
-```javascript
+```javascript title=src/main/services/hooks.services.ts
 import { createHookService } from "../modules/service.module";
 
   // This function will be called when the window looses focus
@@ -65,7 +65,7 @@ export { onBlurHook }
 
 Alternatively, calling `createService()` is the same as calling `createHookService('on-init')`. The both functions will be executed once the app is ready.
 
-```javascript
+```javascript title=src/main/services/hooks.services.ts
 import { createService, createHookService } from "../modules/service.module";
 
   // This function will be called when the app is ready
@@ -88,7 +88,7 @@ Add your hooks to the `src/main/services/hooks.services.ts` file.
 
 ## Schedulers
 Schedulers are basically cron jobs that run at specific time. For example you can create a scheduler service that runs every hour. [Learn more about cron jobs](https://www.freeformatter.com/cron-expression-generator-quartz.html). See the example below:
-```javascript
+```javascript title=src/main/services/scheduler.services.ts
 import { createSchedulerService } from "../modules/service.module";
 
  // This service runs every hour

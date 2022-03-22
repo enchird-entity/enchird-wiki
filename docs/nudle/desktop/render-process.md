@@ -61,7 +61,7 @@ When you register in new view be it in the `main` or `auth` folders, for a user 
 ## Registering modules
 This project uses many packages like [moment](https://momentjs.com), [lodash](https://lodash.com). You can install other dependencies you see fit, make sure you follow our [guide for using packages](/docs/guide-to-using-packages/).
 After installing a vue plugin, for you to be able to use it the plugin, you will have to register it in `src/renderer/modules/index.ts`. For example if you wish to use the vue js plugin for ripple effect `vue-material-design-ripple`. We will register it as a vue directive.
-```javascript
+```javascript title=src/renderer/modules/index.ts
 // Importing package form node_modules
 import 'vue-material-design-ripple/dist/vue-material-design-ripple.css'
 import Ripple from 'vue-material-design-ripple'
@@ -94,8 +94,7 @@ export default function registerModules(App: App) {
 ## Internationalization (i18n)
 As of now Nudle is multi-lingual, supporting three langues; English, French and Spanish. The language files are located in `src/renderer/locales/`  Nudle uses a third party vue library [Vue-i18n](https://kazupon.github.io/vue-i18n/guide/formatting.html#named-formatting) to format language strings.
 #### Example usage
-```json
-// In src/renderer/locales/en.json
+```json title=src/renderer/locales/en.json
 {
     ...
     "add_items_to_order": "Please add items to complete order"

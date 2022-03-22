@@ -37,7 +37,7 @@ keep a consistent workflow, as a result, there a few rules to to consider:
 This project uses many packages like [moment](https://momentjs.com), [lodash](https://lodash.com). You can install other dependencies you see fit, make sure you follow our [guide for using packages](/docs/guide-to-using-packages/).
 #### Registering vue packages
 After installing a vue plugin, for you to be able to use it the plugin, you will have to register it in `src/renderer/modules/index.ts`. For example if you wish to use the vue js plugin for ripple effect `vue-material-design-ripple`. We will register it as a vue directive.
-```javascript
+```javascript title=src/renderer/modules/index.ts
 // Importing package form node_modules
 import 'vue-material-design-ripple/dist/vue-material-design-ripple.css'
 import Ripple from 'vue-material-design-ripple'
@@ -51,7 +51,7 @@ export default function registerModules(App: App) {
 
 ### Using Icons
 This project uses a third-party vue library for icons called [Oh Vue Icons](https://oh-vue-icons.js.org/). For the purpose of optimizing our bundle size, we recommend you manually import only the icon modules you need in `src/renderer/modules/icons.ts`. For example, to import an edit icon.
-```javascript
+```javascript title=src/renderer/modules/icons.ts
 // In src/renderer/modules/icons.ts
 import { MdEdit } from "oh-vue-icons/icons";
 
@@ -64,7 +64,7 @@ export default function registerIcons(app) {
 ```
 
 Usage in your vue file
-```html
+```html title=src/renderer/views/main/inventory/Inventory.vue
 <!-- usage in src/renderer/views/main/inventory/Inventory.vue -->
 <v-icon name="md-edit" />
 ```
@@ -74,8 +74,7 @@ Learn more about how to use Oh Icons [here.](https://oh-vue-icons.js.org/docs/)
 ### Internationalization (i18n)
 As of now Nudle is multi-lingual, supporting three langues; English, French and Spanish. The language files are located in `src/renderer/locales/`  Nudle uses a third party vue library [Vue-i18n](https://kazupon.github.io/vue-i18n/guide/formatting.html#named-formatting) to format language strings.
 #### Example usage
-```json
-// In src/renderer/locales/en.json
+```json title=src/renderer/locales/en.json
 {
     ...
     "add_items_to_order": "Please add items to complete order"

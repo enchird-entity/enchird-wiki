@@ -10,8 +10,7 @@ Nudle uses [Vuex](https://vuex.vuejs.org/guide/) for state management, by using 
 We divide our stores into modules. modules contain their own state, mutations, actions and getters. We have users module, inventory module etc. Suppose we introduce customers to Nudle, we will have a customers module like the example below:
 
 ### Customer module example
-```tsx
-// My customers modules will be in /renderer/store/modules/customers.ts
+```javascript title=src/renderer/store/modules/customers.ts
 export default {
     state: {
         data: []

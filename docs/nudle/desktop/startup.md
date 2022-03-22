@@ -10,7 +10,7 @@ When the app is launched (when the user clicks on the app icon or when the devel
 2. When the application is ready, the main app window is created
 3. The is Nudle service handler is first attached to the created window. This is important for ipc listeners and events. 
 4. Nudle services are initialized.
-```js
+```js title=src/main/index.ts
 async function main() {
   const logger = new LoggerModule()
   logger.initialize(app.getPath('userData'));
@@ -29,7 +29,7 @@ When the Browser widow has fully initialized, the browser window loads the UI. T
 1. It loads the settings to vue store and then set's the default the language of the app from the settings config.
 2. We initialize a listener that listen for backup data request from the main process and sends the idb database as a serialized json data.
 
-```ts
+```ts title=src/renderer/App.vue
 ...
 created() {
     // Get settings and set the default language

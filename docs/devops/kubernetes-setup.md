@@ -5,22 +5,22 @@ title: Kubernetes setup
 
 # Setup of the test Kubernetes cluster.
 
-> ### Disclaimer
->This was done with:
->- Ubuntu 16.04.6 LTS
->- Linux 4.4.0-142-generic x86_64
->- Docker version 20.10.7, build f0df350
->- Kubeadm Version
->  ```bash
->  kubeadm version: &version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", >GitTreeState:"clean", BuildDate:"2022-03-16T15:57:37Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/amd64"}
->  ```
->- kubectl version
->  ```bash
->  Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-16T15:58:47Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/amd64"}
->  Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-16T15:52:18Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/amd64"}
->  ```
->If your setup does not correspond to these versions, this documentation might not work. In that case, please refer to the official Kubernetes documentation for settting up a production cluster.
-
+:::info Disclaimer
+This was done with:
+- Ubuntu 16.04.6 LTS
+- Linux 4.4.0-142-generic x86_64
+- Docker version 20.10.7, build f0df350
+- Kubeadm Version
+  ```bash
+  kubeadm version: &version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-16T15:57:37Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/amd64"}
+  ```
+- kubectl version
+  ```bash
+  Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-16T15:58:47Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/amd64"}
+  Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.5", GitCommit:"c285e781331a3785a7f436042c65c5641ce8a9e9", GitTreeState:"clean", BuildDate:"2022-03-16T15:52:18Z", GoVersion:"go1.17.8", Compiler:"gc", Platform:"linux/amd64"}
+  ```
+If your setup does not correspond to these versions, this documentation might not work. In that case, please refer to the official Kubernetes documentation for settting up a production cluster.
+:::
 ## Requirements
 Before beginning, the following requirements for the nodes should be satisfied: 
 - A compatible Linux host. The Kubernetes project provides generic instructions for Linux distributions based on Debian and Red Hat, and those distributions without a package manager.

@@ -61,7 +61,7 @@ const config = {
         },
       },
       navbar: {
-        title: 'Enchird Developer',
+        title: 'Enchird Developers',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',

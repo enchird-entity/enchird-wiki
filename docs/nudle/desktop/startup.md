@@ -5,17 +5,18 @@ title: The start up process
 # Start up
 
 ## Creating the app window
-When the app is launched (when the user clicks on the app icon or when the developer runs `yarn run dev`), The main function in the main process entry file is called;
-1. It creates a Logger service instance and we set a path to save log files.
-2. When the application is ready, it creates a browser window
-3. We attack the created browser window to the Nudle service handler which is important for Ipc communications. Then we start the services.
+When the app is launched (when the user clicks on the app icon or when the developer runs `yarn run dev`), The main function in the main process entry file is run then the following processes 
+1. A Logger service instance is created and we set a path to save log files.
+2. When the application is ready, the main app window is created
+3. The is Nudle service handler is first attached to the created window. This is important for ipc listeners and events. 
+4. Nudle services are initialized.
 ```js
 async function main() {
-  const logger = new LoggerService()
+  const logger = new LoggerModule()
   logger.initialize(app.getPath('userData'));
 
   app.whenReady().then(() => {
-    const mainWindow = createWindow()
+    const mainWindow = createWindow();
 
     serviceHandler.setWindow(mainWindow);
     // start services
